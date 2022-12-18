@@ -2,22 +2,24 @@ package org.example.pages;
 
 import org.example.stepDefinitions.Hooks;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.example.stepDefinitions.Hooks.driver;
+import org.testng.Assert;
 
 
 public  class P01_Register {
 
+    WebDriver driver =null;
     P01_Register registerObject;
     P02_Login LoginObject;
     P03_Home HomeObject;
 
     public   P01_Register ()
     {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(Hooks.driver, this);
     }
 
     @FindBy(className = "ico-register")
@@ -32,7 +34,6 @@ public  class P01_Register {
     {
         textElement.sendKeys(value);
     }
-
 
     @FindBy(id = "gender-male")
     WebElement genderRadioBtn;
@@ -70,15 +71,10 @@ public  class P01_Register {
         confirmpasswordTxtBox.sendKeys(Cpass);
         registerBtn.click();
     }
-//
-//
-//    public void userRegisteration(String firstName, String lastName, String email, String password) {
-//
-//        clickButton(genderRadioBtn);
-//        setTextElementText(fnTxtBox, firstName);
-//        setTextElementText(lnTxtBox, lastName);
-//        setTextElementText(emailTxtBox, email);
-//        setTextElementText(passwordTxtBox, password);
-//        setTextElementText(confirmpasswordTxtBox, password);
-//    }
+
+    public void successful_Registration() {
+        WebElement test = driver.findElement(By.className("page-body"));
+        Assert.assertEquals(test, "Your registration completed");
+    }
+
 }

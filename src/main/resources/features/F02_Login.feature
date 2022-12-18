@@ -1,19 +1,17 @@
-@Login
-Feature: User should be able to Login to the system
+@Regression
+Feature: F02_Login | user login to e-commerce website
 
-      #Test Scenario 1
-  Scenario: User Login with valid data
-    Given user open browser
-    And navigate to Login page
-    When User enter valid username and password
-    And User click on login button
-    Then User could login successfully
-    And User click on logout button
-    Then User could logout successfully
-
-  
+  Scenario: User could log in with valid email and password
+    Given user goes to login page
+    When user enters "aessam@gmail.com" and "123456"
+    And user click on login button
+    Then user should be login successfully
+    And user go to the home page
 
 
-     #Test Scenario 2
-  Scenario: User Login with in-valid username and password
-    Given
+  Scenario: User should not log in with invalid email and password
+    When user enters "ali@gmail.com" and "wrongPassword"
+    And user click on login button
+    Then user should not login successfully
+
+

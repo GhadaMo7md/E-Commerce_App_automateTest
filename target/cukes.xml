@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="15.041">
+    <testcase classname="User should be able to register to the system" name="User Register with valid data" time="9.506">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user navigate to Register Page........................................passed
+When User enter valid data..................................................passed
+Then user should register successfully......................................undefined
+]]></failure>
+    </testcase>
+    <testcase classname="User should be able to change currency" name="User change currency" time="5.318">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given Click on currency dropdown............................................undefined
+Then Currency changes successfully..........................................skipped
+And Change currency again...................................................skipped
+]]></failure>
+    </testcase>
+</testsuite>
