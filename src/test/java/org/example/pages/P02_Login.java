@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.WebElement;
 
+import static org.example.pages.P01_Register.setTextElementText;
+
 
 public class P02_Login {
 
@@ -13,7 +15,7 @@ public class P02_Login {
         PageFactory.initElements(Hooks.driver, this);
     }
 
-     @FindBy(className = ("ico-login")
+     @FindBy(className = ("ico-login"))
      public WebElement loginLink;
 
      @FindBy(id = "Email")
@@ -21,6 +23,12 @@ public class P02_Login {
 
      @FindBy(id = "Password")
      WebElement passwordTxtBox;
+
+    public void UserLogin(String email, String password)
+    {
+        setTextElementText(emailTxtBox, email);
+        setTextElementText(passwordTxtBox, password);
+    }
 
 
 

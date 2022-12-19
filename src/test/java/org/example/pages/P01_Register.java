@@ -1,23 +1,20 @@
 package org.example.pages;
 
 import org.example.stepDefinitions.Hooks;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import org.testng.Assert;
-
 
 public  class P01_Register {
 
-    WebDriver driver =null;
+    WebDriver driver;
     P01_Register registerObject;
     P02_Login LoginObject;
-    P03_Home HomeObject;
+    P03_Search HomeObject;
 
-    public   P01_Register ()
+    public  P01_Register ()
     {
         PageFactory.initElements(Hooks.driver, this);
     }
@@ -62,6 +59,7 @@ public  class P01_Register {
 
 
 
+    //@FindBy(className = "page-title")
     public void Regestration (String fname,String lname,String email,String pass,String Cpass )
     {
         fnTxtBox.sendKeys(fname);
@@ -72,9 +70,5 @@ public  class P01_Register {
         registerBtn.click();
     }
 
-    public void successful_Registration() {
-        WebElement test = driver.findElement(By.className("page-body"));
-        Assert.assertEquals(test, "Your registration completed");
-    }
 
 }

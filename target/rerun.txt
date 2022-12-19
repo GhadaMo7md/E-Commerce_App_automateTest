@@ -1,2 +1,0 @@
-file:src/main/resources/features/F01_Register.feature:3
-file:src/main/resources/features/F04_Currency.feature:3
