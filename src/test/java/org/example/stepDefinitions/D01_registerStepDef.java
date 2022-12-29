@@ -22,7 +22,7 @@ public class D01_registerStepDef {
 
     @When("User enter valid data")
     public void insertValidData() {
-        register.Regestration("Ghada7899", "Mohamed", "ghadamohamed02292@mail.com", "1234567", "1234567");
+        register.Regestration("Ghada", "Mohamed", "ghada@gmail.com", "ghada222", "ghada222");
     }
 
     @Then("user should register successfully")
@@ -31,22 +31,8 @@ public class D01_registerStepDef {
         Assert.assertTrue(register.successMessage.getText().contains("Your registration completed"));
     }
 
-//    @Then("user should register successfully")
-//    public void successful_Registration() {
-//            register.successMessage.;
-//    }
-
-
-//    @Then("user should register successfully")
-//    public void userRegisterSuccessfully()
-//    {
-//        Assert.assertTrue(register.successMessage.getText().contains("Your registration completed"));
-//    }
-
 
 }
-//
-//    @Then()
 
 
 
