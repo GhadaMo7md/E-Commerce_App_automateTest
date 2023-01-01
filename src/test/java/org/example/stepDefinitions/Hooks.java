@@ -18,10 +18,10 @@ public class Hooks {
     @Before
     public static void openBrowser(){
 
-//        String chromePath = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";
-//        System.out.println(chromePath);
-//        System.setProperty("WebDriver.chrome.driver", chromePath);
-            WebDriverManager.chromedriver().setup();
+        String chromePath = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver.exe";
+        System.out.println(chromePath);
+        System.setProperty("WebDriver.chrome.driver", chromePath);
+        WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.navigate().to("https://demo.nopcommerce.com/");

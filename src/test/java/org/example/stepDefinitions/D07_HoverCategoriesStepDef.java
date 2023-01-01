@@ -3,9 +3,12 @@ package org.example.stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.P07_HoverCategories;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
+import java.util.List;
 import java.util.Random;
 
 import static org.example.stepDefinitions.Hooks.driver;
@@ -17,13 +20,10 @@ public class D07_HoverCategoriesStepDef {
     @When("user select random one of the three main categories")
     public void categorySelection(){
 
-        int randomNumber = new Random().nextInt(3);
-
-        Actions hover = new Actions(driver);
-
-        hover.moveToElement(hCat.categories().get(randomNumber)).perform();
+    int randomNumber = new Random().nextInt(3);
+    Actions hover = new Actions(driver);
+    hover.moveToElement(hCat.categories().get(randomNumber)).perform();
     }
-
 
     @Then("user could hover on sub categories of the selected main category")
     public void hoverSubCategory(){
@@ -50,7 +50,6 @@ public class D07_HoverCategoriesStepDef {
             subTitle = hCat.subCategories().get(RandomNumber2).getText();
             hCat.subCategories().get(RandomNumber2).click();
         }
-
 
         else if(hCat.clothing().isDisplayed() || hCat.accessories().isDisplayed() || hCat.shoes().isDisplayed())
         {
