@@ -1,0 +1,4 @@
+file:src/main/resources/features/F06_HomeSliders.feature:15:19
+file:src/main/resources/features/F08_FollowUs.feature:15
+file:src/main/resources/features/F10_Filter.feature:3
+file:src/main/resources/features/F03_Search.feature:14

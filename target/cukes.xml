@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="21" time="241.052">
+    <testcase classname="F01_Register | User should be able to register to the system" name="User Register with valid data" time="13.312">
+        <system-out><![CDATA[Given user navigate to Register Page........................................passed
+When User enter valid data..................................................passed
+Then user should register successfully......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | user login to e-commerce website" name="User could Log in with valid email and password and could Logout" time="11.306">
+        <system-out><![CDATA[Given user open the login page..............................................passed
+When user enter valid Email and Password....................................passed
+And user click on login button..............................................passed
+Then user should be login successfully......................................passed
+And User click on logout button.............................................passed
+Then User could logout successfully.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | user login to e-commerce website" name="User should not log in with invalid email and password" time="10.482">
+        <system-out><![CDATA[Given user2 open the login page.............................................passed
+When user2 enter valid Email and Password...................................passed
+And user2 click on login button.............................................passed
+Then user2 should not login successfully....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Search | Logged users could Search products" name="Logged user could search using product name" time="10.26">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user clicked on Login & enter valid Email and Password................passed
+When user click on search box and write "book"..............................passed
+And user press on the search button.........................................passed
+Then "book" should appear successfully......................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at org.example.stepDefinitions.D03_searchStepDef.productFoundSuccess(D03_searchStepDef.java:47)
+	at ✽."book" should appear successfully(file:///C:/Users/Ghada/IdeaProjects/E-Commerce-App-automateTest/src/main/resources/features/F03_Search.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="F03_Search | Logged users could Search products" name="Logged user could search using product name 2" time="9.36">
+        <system-out><![CDATA[Given user clicked on Login & enter valid Email and Password................passed
+When user click on search box and write "laptop"............................passed
+And user press on the search button.........................................passed
+Then "laptop" should appear successfully....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Search | Logged users could Search products" name="Logged user could search using product name 3" time="9.416">
+        <system-out><![CDATA[Given user clicked on Login & enter valid Email and Password................passed
+When user click on search box and write "nike"..............................passed
+And user press on the search button.........................................passed
+Then "nike" should appear successfully......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Search | Logged users could Search products" name="Logged user could search for product using sku" time="10.802">
+        <system-out><![CDATA[When user click on search box and write "SCI_FAITH".........................passed
+And user press on the search button.........................................passed
+And user click on the product in search result..............................passed
+Then "SCI_FAITH" should appear successfully in product page.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Search | Logged users could Search products" name="Logged user could search for product using sku 2" time="9.408">
+        <system-out><![CDATA[When user click on search box and write "APPLE_CAM".........................passed
+And user press on the search button.........................................passed
+And user click on the product in search result..............................passed
+Then "APPLE_CAM" should appear successfully in product page.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_Search | Logged users could Search products" name="Logged user could search for product using sku 3" time="9.223">
+        <system-out><![CDATA[When user click on search box and write "SF_PRO_11".........................passed
+And user press on the search button.........................................passed
+And user click on the product in search result..............................passed
+Then "SF_PRO_11" should appear successfully in product page.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User should be able to change currency between US and Euro currencies" name="user need to change the currency to ERU" time="11.167">
+        <system-out><![CDATA[When User click on Currency drop-down-list and select Euro..................passed
+Then Euro Symbol is shown on the 4 products displayed in Home page..........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F05_Forget Password  | user could reset the password" name="User could reset the password successfully" time="8.206">
+        <system-out><![CDATA[Given user goes to login page...............................................passed
+And user click on forgot password...........................................passed
+When user enters his registered email.......................................passed
+And press on Recover button.................................................passed
+Then user should reset his password successfully............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F06_Home Sliders | user clicks on home sliders" name="Click on First Slider" time="6.563">
+        <failure message="The following asserts failed:&#10;&#9;error expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When User Click on Nokia Slider.............................................passed
+Then Nokia URL shall be appeared............................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	error expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_HomeSlidersStepDef.Success(D06_HomeSlidersStepDef.java:33)
+	at ✽.Nokia URL shall be appeared(file:///C:/Users/Ghada/IdeaProjects/E-Commerce-App-automateTest/src/main/resources/features/F06_HomeSliders.feature:17)
+]]></failure>
+    </testcase>
+    <testcase classname="F06_Home Sliders | user clicks on home sliders" name="Click on Second Slider" time="9.706">
+        <failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When User click on iphone slider............................................passed
+Then Iphone URL shall be appeared...........................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.example.stepDefinitions.D06_HomeSlidersStepDef.Iphone(D06_HomeSlidersStepDef.java:49)
+	at ✽.Iphone URL shall be appeared(file:///C:/Users/Ghada/IdeaProjects/E-Commerce-App-automateTest/src/main/resources/features/F06_HomeSliders.feature:21)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_Hover Categories | user hover on categories" name="Logged user could hover on different sub categories" time="8.02">
+        <system-out><![CDATA[When user select random one of the three main categories....................passed
+Then user could hover on sub categories of the selected main category.......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08_Follow Us  | User clicks on follow us icons" name="user opens facebook link" time="10.566">
+        <system-out><![CDATA[When user clicks on facebook link...........................................passed
+Then user should be directed to the website facabook page...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08_Follow Us  | User clicks on follow us icons" name="user opens twitter link" time="9.314">
+        <system-out><![CDATA[When user clicks on twitter link............................................passed
+Then user should be directed to the website twitter page....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08_Follow Us  | User clicks on follow us icons" name="user opens rss link" time="16.958">
+        <failure message="Expected condition failed: waiting for number of open windows to be 2 (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.7.1', revision: 'c6795baf1a3'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Ghada\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50692}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50692/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c9ef2d6211972dd5a163330febea8bd6" type="org.openqa.selenium.TimeoutException"><![CDATA[When user clicks on rss link................................................failed
+Then user should be directed to the website rss page........................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for number of open windows to be 2 (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\Ghada\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50692}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50692/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c9ef2d6211972dd5a163330febea8bd6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDefinitions.D08_FollowUsStepDef.click_rss(D08_FollowUsStepDef.java:71)
+	at ✽.user clicks on rss link(file:///C:/Users/Ghada/IdeaProjects/E-Commerce-App-automateTest/src/main/resources/features/F08_FollowUs.feature:16)
+]]></failure>
+    </testcase>
+    <testcase classname="F08_Follow Us  | User clicks on follow us icons" name="user opens youtube link" time="11.265">
+        <system-out><![CDATA[When user clicks on youtube link............................................passed
+Then user should be directed to the website youtube page....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F09_Wishlist | user add products to wishlist" name="user could add different products to Wishlist" time="6.894">
+        <system-out><![CDATA[When user clicks on the wishlist button.....................................passed
+Then the product is added to wishlist and success message appears...........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F09_Wishlist | user add products to wishlist" name="user could click on &quot;Wishlist&quot; Tab" time="42.017">
+        <system-out><![CDATA[When user clicks on the wishlist button.....................................passed
+And user waits until success message disappears and clicks on wishlist Tab..passed
+Then product is existed in the wishlist.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User should be able to filter with color" name="User filter with color" time="6.11">
+        <failure message="Cannot invoke &quot;org.openqa.selenium.WebElement.click()&quot; because &quot;this.apparelLink&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given Click on Appreal category.............................................failed
+When User click on Shoes category...........................................skipped
+Then Shoes page category page opens successfully............................skipped
+And User select color filter................................................skipped
+Then Color filter selected..................................................skipped
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "this.apparelLink" is null
+	at org.example.pages.P10_HomePage.openApprealCategory(P10_HomePage.java:115)
+	at org.example.stepDefinitions.D10_FilterStepDef.clickOnCategory(D10_FilterStepDef.java:23)
+	at ✽.Click on Appreal category(file:///C:/Users/Ghada/IdeaProjects/E-Commerce-App-automateTest/src/main/resources/features/F10_Filter.feature:4)
+]]></failure>
+    </testcase>
+</testsuite>
